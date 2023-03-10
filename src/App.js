@@ -5,6 +5,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import LandingPage from "./pages/LandingPage";
 import ShopPage from "./pages/ShopPage";
 import ShopLayout from "./layouts/ShopLayout";
+import CartPage from "./pages/CartPage";
 
 function App() {
   const [salads, setSalads] = useState([]);
@@ -38,24 +39,15 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeLayout />}>
           <Route path="" element={<LandingPage />} />
+          <Route path="/cart" element={<CartPage />} />
           <Route path="/shop" element={<ShopLayout />}>
             <Route
               path=""
               element={
                 <ShopPage
-                  product_1={salads}
-                  product_2={sandwichs}
-                  product_3={pastas}
-                />
-              }
-            />
-            <Route
-              path="all"
-              element={
-                <ShopPage
-                  product_1={salads}
-                  product_2={sandwichs}
-                  product_3={pastas}
+                  salads={salads}
+                  sandwichs={sandwichs}
+                  pastas={pastas}
                 />
               }
             />

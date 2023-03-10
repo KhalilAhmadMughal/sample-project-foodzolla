@@ -19,20 +19,28 @@ export const homeNavs = [
     title: "Shop",
     to: "/shop",
   },
+  {
+    id: "cart",
+    title: "cart",
+    to: "/cart",
+  },
 ];
 
-export const adminNavs = [
+export const filterNavs = [
   {
-    id: "products",
-    title: "products",
-    // icon: products,
-    to: "products",
+    id: "salads",
+    title: "Salads",
+    to: "",
   },
   {
-    id: "bids",
-    title: "bids",
-    // icon: bid,
-    to: "bids",
+    id: "Sandwichs",
+    title: "Sandwichs",
+    to: "",
+  },
+  {
+    id: "Pastas",
+    title: "Pastas",
+    to: "",
   },
 ];
 

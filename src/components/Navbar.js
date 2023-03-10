@@ -54,17 +54,19 @@ const Navbar = () => {
           </span>
         </div>
         <ul className="flex flex-col mt-6 gap-2">
-          {homeNavs.map((nav, index) => (
-            <NavLink
-              to={nav.to}
-              className={({ isActive }) =>
-                isActive
-                  ? "border-2 p-2 border-dashed font-semibold text-purple border-purple transition-all duration-200 text-secondary hover:text-white"
-                  : "p-2 hover:text-purple font-semibold cursor-pointer"
-              }
-            >
-              {nav.title}
-            </NavLink>
+          {homeNavs.map((nav) => (
+            <li key={nav.id}>
+              <NavLink
+                to={nav.to}
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-2 p-2 border-dashed font-semibold text-purple border-purple transition-all duration-200 text-secondary hover:text-white"
+                    : "p-2 hover:text-purple font-semibold cursor-pointer"
+                }
+              >
+                {nav.title}
+              </NavLink>
+            </li>
           ))}
         </ul>
       </div>

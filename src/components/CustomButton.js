@@ -4,7 +4,7 @@ const CustomButton = (props) => {
   return (
     <button
       type={props.type}
-      className="p-2 bg-gradient-primary w-full rounded text-black capitalize hover:text-white"
+      className="p-2 font-semibold bg-gradient-primary w-full rounded text-white capitalize hover:text-purple hover:bg-gradient-secondary"
     >
       {props.children}
     </button>
